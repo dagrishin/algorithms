@@ -41,13 +41,14 @@ def suma(number_1, number_2):
 print('Сумма = ', suma(a.copy(), b.copy()))
 # Умножение
 ost = 0
-amount = deque()
 amount_fin = ['0']
 i = len(a) - 1
 j = len(b) - 1
 while i >= 0:
     c = a[i]
     j = len(b) - 1
+    amount = deque('0'*(len(a)-i-1))
+    ost = 0
     while j >= 0:
         d = b[j]
         s = number[c] * number[d] + ost
@@ -62,7 +63,5 @@ while i >= 0:
     if ost != 0:
         amount.appendleft(alphabet[ost])
     amount_fin = suma(amount_fin, amount)
-    amount = deque('0' * (len(a) - i - 1))
-    ost = 0
 print(ost)
 print('Произведение', amount_fin)
