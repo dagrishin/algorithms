@@ -63,5 +63,4 @@ while i >= 0:
     if ost != 0:
         amount.appendleft(alphabet[ost])
     amount_fin = suma(amount_fin, amount)
-print(ost)
 print('Произведение', amount_fin)
