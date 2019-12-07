@@ -16,7 +16,8 @@ array = [random.randint(0, 9) for i in range(n)]
 
 def median_sort(array):
     array_copy = sorted(array.copy())
-    return array_copy[len(array_copy) // 2]
+    med = array_copy[len(array_copy) // 2]
+    return med
 
 
 def find_median(array):
@@ -36,7 +37,7 @@ def find_median(array):
                     count += 1
         # print(array[i], count_right, count_left, count)
         if count_left == len(array) // 2 or count_right == len(array) // 2 or count == len(
-                array) or count_left == count_right:
+                array) or count_left == count_right or abs(count_left - count_right) == count:
             return array[i]
         if min > abs(abs(count_left - count_right) - count):
             min = abs(abs(count_left - count_right) - count)
