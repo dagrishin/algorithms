@@ -35,6 +35,9 @@ def find_median(array):
                 else:
                     count += 1
         # print(array[i], count_right, count_left, count)
+        if count_left == len(array) // 2 or count_right == len(array) // 2 or count == len(
+                array) or count_left == count_right:
+            return array[i]
         if min > abs(abs(count_left - count_right) - count):
             min = abs(abs(count_left - count_right) - count)
             index = i
@@ -44,7 +47,7 @@ def find_median(array):
 # array = [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9, 9]
 
 
-# for i in range(1000000):
+# for i in range(10000):
 #     array = [random.randint(0, 9) for i in range(n)]
 #     med_1 = median_sort(array)
 #     med_2 = find_median(array)
