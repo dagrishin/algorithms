@@ -23,10 +23,11 @@ def median_sort(array):
 def find_median(array):
     index = 0
     min = len(array)
-    unique_dict = {}
+    unique_dict = []
     for i in range(len(array)):
-        if not unique_dict.setdefault(array[i]):
-            unique_dict[array[i]] = i
+        # print(unique_dict.setdefault(array[i]))
+        if array[i] not in unique_dict:
+            unique_dict.append(array[i])
             count_right = 0
             count_left = 0
             count = 0
