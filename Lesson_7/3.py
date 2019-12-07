@@ -48,15 +48,15 @@ def find_median(array):
 # array = [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9, 9]
 
 
-# for i in range(10000):
-#     array = [random.randint(0, 9) for i in range(n)]
-#     med_1 = median_sort(array)
-#     med_2 = find_median(array)
-#     # print('№', i, med_1, med_2)
-#     if med_1 != med_2:
-#         print('№', i, med_1, med_2)
-#         print(array.sort())
-#         break
+for i in range(100000):
+    array = [random.randint(0, 9) for i in range(n)]
+    med_1 = median_sort(array)
+    med_2 = find_median(array)
+    # print('№', i, med_1, med_2)
+    if med_1 != med_2:
+        print('№', i, med_1, med_2)
+        print(array.sort())
+        break
 print(
     timeit.timeit(
         "median_sort(array)",

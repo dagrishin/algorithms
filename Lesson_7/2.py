@@ -6,7 +6,7 @@
 
 import random
 
-array = [random.uniform(0, 49) for _ in range(10)]
+array = [random.randint(0, 49) + random.random() - random.random() for _ in range(10)]
 print(array)
 
 
